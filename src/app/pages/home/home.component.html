@@ -1,0 +1,37 @@
+<!-- <div class="bg-dark">
+    <div class="container">
+       <div class="row">
+         <div class="col-md-3 shadow-lg" *ngFor="let item of items()">
+             <div class="card mb-5 ml-2 position-relative" style="width: 15rem;"><button class="button button5 position-absolute ml-18"><i class="fas fa-heart"></i></button>
+   
+               <img  class="mx-auto d-block img-responsive img-fluid" src="{{item.image}}" class="card-img-top" alt="...">
+               <div class="card-body" >
+                 <h5 class="card-title text-primary text-center">{{item.name}}</h5>
+                 <p class="card-title text-center text-dark"><b><i class="fas fa-rupee-sign"></i>{{item.price}}</b></p>
+                 <p class="card-text">if you buy this pack your eligible for prime user,you have eligible  for 70% discount!!!</p>
+                 <a href="javascript:void()" class="btn btn-success " (click)="addToCart(p)">BUY NOW</a>
+               </div>
+             </div>
+         </div>
+       </div>
+   </div>
+   </div>
+   
+    -->
+<div class="bg-dark">
+     <div class="container">
+         <div class="row">
+            <div class="col-md-4 shadow-lg" *ngFor="let item of items()">
+                    <div class="card mb-5" style="width: 18rem;" >
+                        <img src="{{item.image}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">{{item.name}}</h5>
+                            <p class="card-text">{{item.price}}</p>
+                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <button class="btn btn-info" (click)="add(item)">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

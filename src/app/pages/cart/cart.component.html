@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>S.no</th>
+        <th>name</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>total</th>
+
+    </tr>
+    <tr *ngFor="let list of cartitems">
+        <td>{{list.id}}</td>
+        <td>{{list.name}}</td>
+        <td>{{list.price}}</td>
+        <td><button (click)="decrease(list.id)">-</button><span class="p-2">{{list.quantity}}</span><button (click)="increase(list.id)">+</button></td>
+        <td>{{list.quantity*list.price}}</td>
+        
+    </tr>
+</table>
+
+<td>{{total}}</td>
