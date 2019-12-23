@@ -9,24 +9,14 @@ import { isNgTemplate } from '@angular/compiler';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private ser:PageserviceService) { }
+  constructor() { }
 
-  items(){
-    return this.ser.products
-  }
+  
 
   
   ngOnInit() {
   }
 
- add(p:any){
-   if(this.ser.cart.hasOwnProperty(p.id)){
-     this.ser.cart[p.id].quantity+=1
-   }else{
-     this.ser.cart[p.id]=p
-   }
-   
-console.log(this.ser.cart)
+ 
  }
 
-}

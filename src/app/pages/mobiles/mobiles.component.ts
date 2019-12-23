@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageserviceService } from 'src/app/pageservice.service';
 
 @Component({
   selector: 'app-mobiles',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobilesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private s:PageserviceService) { }
+  items(){
+    return this.s.mobiles
+  }
 
   ngOnInit() {
   }
 
+  add(z:any){
+    if(this.s.cart.hasOwnProperty(z.id)){
+    this.s.cart[z.id].quantity+=1
+  }else{
+  this.s.cart[z.id]=z
+  }
+  console.log(z)
+  }
 }

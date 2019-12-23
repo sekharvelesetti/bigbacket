@@ -14,6 +14,10 @@ import { AssociersComponent } from './pages/associers/associers.component';
 import { CatageriosComponent } from './pages/catagerios/catagerios.component';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { LoginComponent } from './pages/login/login.component';
+import {FormsModule} from '@angular/forms'
+import {AngularFontAwesomeModule} from 'angular-font-awesome'
+import {MatDialogModule}  from '@angular/material/dialog'
 
 @NgModule({
   declarations: [
@@ -28,11 +32,16 @@ import { CartComponent } from './pages/cart/cart.component';
     AssociersComponent,
     CatageriosComponent,
     HeaderComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AngularFontAwesomeModule,
+    MatDialogModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

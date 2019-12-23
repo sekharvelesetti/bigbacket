@@ -1,20 +1,30 @@
-<table>
-    <tr>
+<table class="table table-striped  ">
+    <thead class="table">
+    <tr class="bg-dark text-light">
         <th>S.no</th>
         <th>name</th>
+        <th>product</th>
         <th>price</th>
         <th>quantity</th>
         <th>total</th>
-
     </tr>
+</thead>
     <tr *ngFor="let list of cartitems">
         <td>{{list.id}}</td>
         <td>{{list.name}}</td>
+        <td><img src="{{list.image}}"></td>
         <td>{{list.price}}</td>
-        <td><button (click)="decrease(list.id)">-</button><span class="p-2">{{list.quantity}}</span><button (click)="increase(list.id)">+</button></td>
+        <td><button class="btn btn-info" (click)="decrease(list.id)">-</button><span class="p-2">{{list.quantity}}</span><button class="btn btn-info" (click)="increase(list.id)">+</button></td>
         <td>{{list.quantity*list.price}}</td>
         
     </tr>
+    <tr>
+        <td colspan="5"><h1>Sub Total:</h1></td>
+        <td colspan="1"><h1><i class="far fa-rupee-sign"></i>{{total}}</h1></td>
+
+    </tr> 
+    
 </table>
 
-<td>{{total}}</td>
+
+
