@@ -15,9 +15,14 @@ import { CatageriosComponent } from './pages/catagerios/catagerios.component';
 import { HeaderComponent } from './header/header.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { LoginComponent } from './pages/login/login.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import {AngularFontAwesomeModule} from 'angular-font-awesome'
-import {MatDialogModule}  from '@angular/material/dialog'
+import {MatDialogModule}  from '@angular/material/dialog';
+import { SignupComponent } from './pages/signup/signup.component';
+import { HometheaterComponent } from './pages/electronics/hometheater/hometheater.component';
+import { LaptopsComponent } from './pages/electronics/laptops/laptops.component';
+import { TelevisionComponent } from './pages/electronics/television/television.component'
+
 
 @NgModule({
   declarations: [
@@ -33,7 +38,11 @@ import {MatDialogModule}  from '@angular/material/dialog'
     CatageriosComponent,
     HeaderComponent,
     CartComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    HometheaterComponent,
+    LaptopsComponent,
+    TelevisionComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +50,7 @@ import {MatDialogModule}  from '@angular/material/dialog'
     FormsModule,
     AngularFontAwesomeModule,
     MatDialogModule,
+    ReactiveFormsModule
    
   ],
   providers: [],

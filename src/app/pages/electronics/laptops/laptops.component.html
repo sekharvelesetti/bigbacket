@@ -1,0 +1,39 @@
+<!-- <ul>
+    <li *ngFor="let item of laptops">
+       
+         <button class="btn btn-primary" routerLink="/electronics/laptops/{{item.path}}">{{item.price}}</button>
+        
+    </li>
+</ul>
+ <p class="p-3 text-bold">
+    {{lapto}}
+</p> -->
+<div class="container">
+<div class="row">
+    <div class="col-6" style="width: 300px;height: 600px; overflow: scroll;">
+<div  *ngFor="let mylap of laptops">
+    <div class="card mb-5" >
+        <div class="card-header">
+          LOPTOPS
+        </div>
+        <div class="card-body" >
+            <img src="{{mylap.image}}">
+          <h5 class="card-title">{{mylap.price}}</h5>
+          <a href="#" class="btn btn-primary" routerLink="/electronics/laptops/{{mylap.path}}">deatils</a>
+        </div>
+      </div>
+ </div>
+</div>
+<div class="col-6 lap">
+  <table>
+    <tr>
+      <th>laptops details</th>
+    </tr>
+    <tr>
+      <h2>{{lapto}}</h2>
+    </tr>
+</table>
+</div>
+ 
+</div>
+</div>

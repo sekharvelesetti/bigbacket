@@ -18,6 +18,10 @@ export class PageserviceService {
   imgsrc12="https://rukminim1.flixcart.com/image/312/312/k12go7k0/mobile/7/e/e/apple-iphone-7-mn8x2hn-a-original-imafkqcqhzxuvcpd.jpeg?q=70"
   imgsrc13="https://rukminim1.flixcart.com/image/312/312/jeiukcw0/mobile/9/y/y/samsung-galaxy-s9-plus-sm-g965fzkdins-original-imaf372g5zukw8wr.jpeg?q=70"
   imgsrc14="https://rukminim1.flixcart.com/image/312/312/k2jbyq80pkrrdj/mobile-refurbished/9/b/e/one-action-128-b-pafy0002in-motorola-4-original-imafjeba94knawvz.jpeg?q=70"
+  imgsrc15="https://rukminim1.flixcart.com/image/612/612/jvv9zm80/home-theatre-system/g/7/x/o-krisons-original-imafgzd392gjuavh.jpeg?q=70"
+  imgsrc16="https://rukminim1.flixcart.com/image/312/312/k3xcdjk0/television/r/5/h/nokia-55cauhdn-original-imafmxw7qfxh6b7a.jpeg?q=70"
+  imgsrc17="https://rukminim1.flixcart.com/image/312/312/jmz7csw0/computer/v/u/q/hp-na-laptop-original-imaf9zypsgmfz4zk.jpeg?q=70"
+  imgsrc18="https://rukminim1.flixcart.com/image/352/352/k0y6cnk0/television/n/5/d/vu-32bfm-original-imafkmsddphzdzyh.jpeg?q=70"
  products=[
    {id:1,name:"shirts",catagory:"mens",price:499,image:this.imgsrc1,quantity:1},
    {id:2,name:"saree",catagory:"women",price:499,image:this.imgsrc2,quantity:1},
@@ -38,6 +42,31 @@ export class PageserviceService {
   {id:14,name:"I phone",catagory:"mobiles",price:111499,image:this.imgsrc12,quantity:1},
   {id:15,name:"Samsung",catagory:"mobiles",price:8999,image:this.imgsrc13,quantity:1},
   {id:16,name:"Motrola",catagory:"mobiles",price:9999,image:this.imgsrc14,quantity:1}
+ ]
+
+ hometheater={
+   "sony":{name:"sony",price:2000,image:this.imgsrc15,discription:"sony is the betst "},
+   "samsung":{name:"samsung",price:12000,image:this.imgsrc15,discription:"samsung is the betst "},
+   "xiaomi":{name:"xiaomi",price:9000,image:this.imgsrc15,discription:"xiaomi is the betst "},
+   "realme":{name:"realme",price:24000,image:this.imgsrc15,discription:"realme is the betst "},
+   "jbl":{name:"jbl",price:24000,image:this.imgsrc15,discription:"jbl is the betst "},
+   "boat":{name:"boat",price:24000,image:this.imgsrc15,discription:"boat is the betst "}
+ }
+
+ laptops=[
+   {path:"hp",price:22000,discription:"hp is best for coding",image:this.imgsrc17},
+   {path:"dell",price:22000,discription:"dell is bes for coding",image:this.imgsrc17},
+   {path:"mackbook",price:22000,discription:"mackbook is bst for coding",image:this.imgsrc17},
+   {path:"lenovo",price:22000,discription:"lenovo is est for coding",image:this.imgsrc17},
+
+ ]
+
+ television=[
+   {name:"oneplus",price:25000,img:this.imgsrc16,discription:"ONEPLUS NEVER SETTLE",ScreenType:"LED DIMOND"},
+   {name:"micromax",price:25000,img:this.imgsrc18,discription:"MICROMAX OLD AND BEST MOBILE",ScreenType:"LED DIMOND"},
+   {name:"redmi",price:25000,img:this.imgsrc16,discription:" ONE OF THE PRODUCT OF XIAOMI",ScreenType:"LED DIMOND"},
+   {name:"nokia",price:25000,img:this.imgsrc18,discription:"NOKIA CONNECTING THE PEOPLE",ScreenType:"LED DIMOND"}
+
  ]
 cart={}
   constructor() { }

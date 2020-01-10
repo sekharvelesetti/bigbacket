@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6" style="width: 100px;height: 600px; overflow: scroll;">
+    <div  *ngFor="let mytv of tv">
+        <div class="card mb-5" >
+            <div class="card-header">
+              <h1>{{mytv.name}}</h1>
+            </div>
+            <div class="card-body" >
+                <img src="{{mytv.img}}">
+              <h5 class="card-title">{{mytv.price}}</h5>
+              <a href="#" class="btn btn-primary" routerLink="/electronics/television/{{mytv.name}}">deatils</a>
+            </div>
+          </div>
+     </div>
+    </div>
+    
+     <div class="col-6 lap">
+        <table class="table table-bordered">
+            <thead><tr><td><h1>specifications</h1></td></tr></thead>
+            <tbody><tr><td><h6>{{ledtv}}</h6></td></tr></tbody>
+        </table>
+
+       
+        </div>
+
+
+    </div>
+    </div>
