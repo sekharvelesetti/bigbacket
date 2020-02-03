@@ -21,7 +21,8 @@ export class MobilesComponent implements OnInit {
     this.s.cart[z.id].quantity+=1
   }else{
   this.s.cart[z.id]=z
+  
   }
-  console.log(z)
+  
   }
 }

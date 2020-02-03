@@ -1,9 +1,10 @@
+<app-header></app-header>
 
-
-    <form class="form-group container justify-center w-25 mt-5 border s-2 p-5">
+    <form [formGroup]="Login" (ngSubmit)="onSubmit(login)" class=" container justify-center w-25 mt-5 border s-2 p-5">
         <li class="fa fa-user fa-5x mar"></li>
-        <input type="text" placeholder="username" class="form-control mb-3 s ">
-        <input type="password" placeholder="password" class="form-control mb-3 s ">
+        <input type="text" formControlName="user" placeholder="username" class="form-control mb-3 s ">
+        <div *ngIf="this.profile1.name===this.Login.value.user" class="text-danger">{{alert}}</div>
+        <input type="password" formControlName="password" placeholder="password" class="form-control mb-3 s ">
         <button class="w-100 s btn btn-info">Login</button>
         <p class="mt-2 ">new user ? <a routerLink="/signup">signUp</a></p><a href="">forgot password</a>
     </form>

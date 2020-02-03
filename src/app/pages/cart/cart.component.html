@@ -1,4 +1,5 @@
-<table class="table table-striped  ">
+
+<!-- <table class="table table-striped  ">
     <thead class="table">
     <tr class="bg-dark text-light">
         <th>S.no</th>
@@ -16,14 +17,93 @@
         <td>&#8377;{{list.price}}</td>
         <td><button class="btn btn-info" (click)="decrease(list.id)">-</button><span class="p-2">{{list.quantity}}</span><button class="btn btn-info" (click)="increase(list.id)">+</button></td>
         <td>&#8377;{{list.quantity*list.price}}</td>
+        <td><button class="btn btn-danger" (click)="remove(list)">X</button></td>
         
     </tr>
     <tr>
         <td colspan="5"><h1>Sub Total:</h1></td>
-        <td colspan="1"><h1>{{total}}</h1></td>
+        <td>{{total}}</td>
+        <td colspan="1"><h1>{{total+quantity*delivary}}</h1></td>
+        <td><h1>{{quantity}}</h1></td>
+        <td><h1>{{delivary}}</h1></td>
     </tr> 
     
-</table>
+</table> -->
+
+<app-header></app-header>
+
+<div *ngIf="!quantity" class="text-dark">
+    <div class="cart">
+    <h5>this cart box empty</h5>
+    <button class="btn btn-primary" routerLink="/clothes">shop Now</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                 <div class="card-body  text-dark row"*ngFor="let list of cartitems  let i=index" >
+                    <div class="col-md-4">
+                        <div class="row">
+                        <img class="display-inline" src="{{list.image}}">
+                        <div class="mt-2 d-flex p-2"><button class="btn btn-info  btn" (click)="decrease(list.id)">-</button><span class="p-2">{{list.quantity}}</span><button class="btn btn-info  btn" (click)="increase(list.id)">+</button></div>
+                    </div>
+                    </div>
+                    <div class="col-md-4 b-2">
+                        <h5>{{list.name}} is the with 64mp camera;4000mah battary</h5>
+                        <h6><span class="text-danger">this product have easy return policy</span></h6>
+                       </div>
+                  <div class="col-md-4">
+                    <h5 class="card-title">{{list.name}}</h5>
+                    <h6 class="card-text">{{list.price}}</h6>
+                    <button href="#" class="btn btn-primary">Buy Now</button>
+                    <button (click)="remove(list)" class="btn btn-danger ml-2">Remove</button>
+                  </div>
+                </div>
+               </div>
+              </div>
+
+
+        <div class="col-md-4" *ngIf="quantity">
+            <table class=" table table-hover table-striped border mt-3 ">
+                <tr>
+                <th>Details</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><h5>item cost :</h5> </td>
+                <td> {{total}}</td>
+            </tr>
+            <tr>
+                <td><h5>delivary Fee :</h5></td>
+                <td> {{delivary}}</td>
+            </tr>
+            <tr>
+                <td><h5>Total Cost: </h5></td>
+                <td> {{total+quantity*delivary}}</td>
+            </tr>
+            </table>
+            <table class="col-md-12 table table-hover table-striped border mt-3 ">
+                <tr>
+                    <th>Shop 1500 more For free Shipping</th>
+                </tr>
+                <tr>
+                    <td>this offer only valid today</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </div>
+    <div class="container border">
+        <div class="col-md-9 fixed-bottom"  *ngIf="quantity">
+            <button class="btn btn-success btn-lg  mt-5 margin">Place Order</button>        
+    
+        </div>
+
+    </div>
+    
+    
 
 
 

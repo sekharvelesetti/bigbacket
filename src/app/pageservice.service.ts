@@ -45,13 +45,15 @@ export class PageserviceService {
  ]
 
  hometheater={
-   "sony":{name:"sony",price:2000,image:this.imgsrc15,discription:"sony is the betst "},
-   "samsung":{name:"samsung",price:12000,image:this.imgsrc15,discription:"samsung is the betst "},
-   "xiaomi":{name:"xiaomi",price:9000,image:this.imgsrc15,discription:"xiaomi is the betst "},
-   "realme":{name:"realme",price:24000,image:this.imgsrc15,discription:"realme is the betst "},
-   "jbl":{name:"jbl",price:24000,image:this.imgsrc15,discription:"jbl is the betst "},
-   "boat":{name:"boat",price:24000,image:this.imgsrc15,discription:"boat is the betst "}
+   "sony":{name:"sony",price:2000,image:this.imgsrc15,discription:"sony is the betst",quantity:1},
+   "samsung":{name:"samsung",price:12000,image:this.imgsrc15,discription:"samsung is the betst ",quantity:1},
+   "xiaomi":{name:"xiaomi",price:9000,image:this.imgsrc15,discription:"xiaomi is the betst ",quantity:1},
+   "realme":{name:"realme",price:24000,image:this.imgsrc15,discription:"realme is the betst ",quantity:1},
+  "jbl":{name:"jbl",price:24000,image:this.imgsrc15,discription:"jbl is the betst ",quantity:1},
+   "boat":{name:"boat",price:24000,image:this.imgsrc15,discription:"boat is the betst ",quantity:1}
  }
+
+
 
  laptops=[
    {path:"hp",price:22000,discription:"hp is best for coding",image:this.imgsrc17},

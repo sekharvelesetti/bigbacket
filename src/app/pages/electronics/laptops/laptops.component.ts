@@ -30,8 +30,16 @@ lapto="";
         
       }
     })
+
+    
   }
 
-  
+  add(p:any){
+    if(this.ser.cart.hasOwnProperty(p.id)){
+      this.ser.cart[p.id].quantity+=1
+    }else{
+      this.ser.cart[p.id]= p
+    }
+}
 
 }

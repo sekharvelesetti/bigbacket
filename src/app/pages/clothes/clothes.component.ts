@@ -10,6 +10,7 @@ export class ClothesComponent implements OnInit {
   items(){
     return this.ser.products
   }
+  sekhar="this cart is empty"
   constructor(private ser:PageserviceService) { }
 
   ngOnInit() {

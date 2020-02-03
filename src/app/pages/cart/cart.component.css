@@ -1,4 +1,27 @@
 img {
-    height: 100px;
+    height: 200px;
+    width: auto;
 }
 
+.border{
+    border: 2px solid;
+}
+
+.btn {
+    
+    
+    border-radius: 8px;
+}
+
+.cart {
+    width:50%;
+    height: 200px;
+    margin-left: 20%;
+    position: absolute;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.margin {
+    margin-left:72%;
+}

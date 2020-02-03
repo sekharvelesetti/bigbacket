@@ -11,6 +11,7 @@
               <h5 class="card-title">{{home.name}}</h5>
               <p class="card-text">{{home.price}}</p>
               <a href="#" class="btn btn-primary" routerLink="/electronics/hometheater/{{home.name}}">deatils</a>
+              <a  class="btn btn-info" routerLink="/cart" (click)=add(home)>add To Cart</a>
             </div>
           </div>
      </div>
