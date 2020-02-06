@@ -48,11 +48,9 @@ quanti(){
 update(){
   this.delivary=0
   if(this.total<10000){
-    this.delivary=0
-  }else if(this.total<20000){
     this.delivary=20
   }else{
-    this.delivary=40
+    this.delivary=0
   }
   
 }

@@ -1,6 +1,6 @@
 img {
     height: 200px;
-    width: auto;
+    width: 150px;
 }
 
 .border{
@@ -23,5 +23,11 @@ img {
 }
 
 .margin {
-    margin-left:72%;
+    margin-left:60%;
+}
+.sticky{
+    top:45px;
+    
+     height: 0px;
+
 }

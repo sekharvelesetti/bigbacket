@@ -14,7 +14,7 @@ import { TelevisionComponent } from './pages/electronics/television/television.c
 
 
 const routes: Routes = [
-  {path:"home",component:HomeComponent},
+  {path:"",component:HomeComponent},
   {path:"clothes",component:ClothesComponent},
   {path:"electronics",component:ElectronicsComponent,children:
   [  {path:"",redirectTo:"hometheater",pathMatch:"full"},
@@ -29,7 +29,7 @@ const routes: Routes = [
   {path:"mobiles",component:MobilesComponent},
   {path:"Associers",component:AssociersComponent},
   {path:"cart",component:CartComponent},
-  {path:"",component:LoginComponent},
+  {path:"login",component:LoginComponent},
   {path:"signup",component:SignupComponent}
 
 

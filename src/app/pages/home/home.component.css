@@ -4,3 +4,20 @@
     border-radius: black;
 } */
 
+img {
+   height: 50px;
+   width: 80%;
+   margin-left: 10px;
+}
+.image {
+    height: 400px; 
+    width:100%
+}
+
+.height {
+    height: 300px;
+    
+} 
+.margin {
+    margin-top: 30%;
+}

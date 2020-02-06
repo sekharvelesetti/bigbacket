@@ -8,15 +8,18 @@ import { isNgTemplate } from '@angular/compiler';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+item() {
+  return this.ser.product
+}
+  constructor(private ser:PageserviceService) { }
 
   
 
   
   ngOnInit() {
+   
   }
-
+ 
  
  }
 

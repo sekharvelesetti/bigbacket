@@ -22,6 +22,7 @@ export class PageserviceService {
   imgsrc16="https://rukminim1.flixcart.com/image/312/312/k3xcdjk0/television/r/5/h/nokia-55cauhdn-original-imafmxw7qfxh6b7a.jpeg?q=70"
   imgsrc17="https://rukminim1.flixcart.com/image/312/312/jmz7csw0/computer/v/u/q/hp-na-laptop-original-imaf9zypsgmfz4zk.jpeg?q=70"
   imgsrc18="https://rukminim1.flixcart.com/image/352/352/k0y6cnk0/television/n/5/d/vu-32bfm-original-imafkmsddphzdzyh.jpeg?q=70"
+  imgsrc19="https://images-eu.ssl-images-amazon.com/images/G/31/img19/Wireless/MSO_november/TripleCamera/2x_1._SY116_CB447184121_.jpg"
  products=[
    {id:1,name:"shirts",catagory:"mens",price:499,image:this.imgsrc1,quantity:1},
    {id:2,name:"saree",catagory:"women",price:499,image:this.imgsrc2,quantity:1},
@@ -45,31 +46,39 @@ export class PageserviceService {
  ]
 
  hometheater={
-   "sony":{name:"sony",price:2000,image:this.imgsrc15,discription:"sony is the betst",quantity:1},
-   "samsung":{name:"samsung",price:12000,image:this.imgsrc15,discription:"samsung is the betst ",quantity:1},
-   "xiaomi":{name:"xiaomi",price:9000,image:this.imgsrc15,discription:"xiaomi is the betst ",quantity:1},
-   "realme":{name:"realme",price:24000,image:this.imgsrc15,discription:"realme is the betst ",quantity:1},
-  "jbl":{name:"jbl",price:24000,image:this.imgsrc15,discription:"jbl is the betst ",quantity:1},
-   "boat":{name:"boat",price:24000,image:this.imgsrc15,discription:"boat is the betst ",quantity:1}
+   "sony":{id:17,name:"sony",price:2000,image:this.imgsrc15,discription:"sony is the betst",quantity:1},
+   "samsung":{id:18,name:"samsung",price:12000,image:this.imgsrc15,discription:"samsung is the betst ",quantity:1},
+   "xiaomi":{id:19,name:"xiaomi",price:9000,image:this.imgsrc15,discription:"xiaomi is the betst ",quantity:1},
+   "realme":{id:20,name:"realme",price:24000,image:this.imgsrc15,discription:"realme is the betst ",quantity:1},
+  "jbl":{id:21,name:"jbl",price:24000,image:this.imgsrc15,discription:"jbl is the betst ",quantity:1},
+   "boat":{id:22,name:"boat",price:24000,image:this.imgsrc15,discription:"boat is the betst ",quantity:1}
  }
 
 
 
  laptops=[
-   {path:"hp",price:22000,discription:"hp is best for coding",image:this.imgsrc17},
-   {path:"dell",price:22000,discription:"dell is bes for coding",image:this.imgsrc17},
-   {path:"mackbook",price:22000,discription:"mackbook is bst for coding",image:this.imgsrc17},
-   {path:"lenovo",price:22000,discription:"lenovo is est for coding",image:this.imgsrc17},
+   {id:23,path:"hp",price:22000,discription:"hp is best for coding",image:this.imgsrc17,quantity:1},
+   {id:24,path:"dell",price:22000,discription:"dell is bes for coding",image:this.imgsrc17,quantity:1},
+   {id:25,path:"mackbook",price:22000,discription:"mackbook is bst for coding",image:this.imgsrc17,quantity:1},
+   {id:26,path:"lenovo",price:22000,discription:"lenovo is est for coding",image:this.imgsrc17,quantity:1},
 
  ]
 
  television=[
-   {name:"oneplus",price:25000,img:this.imgsrc16,discription:"ONEPLUS NEVER SETTLE",ScreenType:"LED DIMOND"},
-   {name:"micromax",price:25000,img:this.imgsrc18,discription:"MICROMAX OLD AND BEST MOBILE",ScreenType:"LED DIMOND"},
-   {name:"redmi",price:25000,img:this.imgsrc16,discription:" ONE OF THE PRODUCT OF XIAOMI",ScreenType:"LED DIMOND"},
-   {name:"nokia",price:25000,img:this.imgsrc18,discription:"NOKIA CONNECTING THE PEOPLE",ScreenType:"LED DIMOND"}
+   {id:27,name:"oneplus",price:25000,img:this.imgsrc16,discription:"ONEPLUS NEVER SETTLE",ScreenType:"LED DIMOND"},
+   {id:28,name:"micromax",price:25000,img:this.imgsrc18,discription:"MICROMAX OLD AND BEST MOBILE",ScreenType:"LED DIMOND"},
+   {id:29,name:"redmi",price:25000,img:this.imgsrc16,discription:" ONE OF THE PRODUCT OF XIAOMI",ScreenType:"LED DIMOND"},
+   {id:30,name:"nokia",price:25000,img:this.imgsrc18,discription:"NOKIA CONNECTING THE PEOPLE",ScreenType:"LED DIMOND"}
 
+ ]
+ product=[
+   {id:31,img:this.imgsrc19},
+   {id:32,},
+   {id:33,},
+   {id:34,}
  ]
 cart={}
   constructor() { }
+
+  items= this.product
 }
