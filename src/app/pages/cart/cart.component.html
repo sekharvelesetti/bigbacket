@@ -1,34 +1,4 @@
 
-<!-- <table class="table table-striped  ">
-    <thead class="table">
-    <tr class="bg-dark text-light">
-        <th>S.no</th>
-        <th>name</th>
-        <th>product</th>
-        <th>price</th>
-        <th>quantity</th>
-        <th>total</th>
-    </tr>
-</thead>
-    <tr *ngFor="let list of cartitems  let i=index">
-        <td>{{i+1}}</td>
-        <td>{{list.name}}</td>
-        <td><img src="{{list.image}}"></td>
-        <td>&#8377;{{list.price}}</td>
-        <td><button class="btn btn-info" (click)="decrease(list.id)">-</button><span class="p-2">{{list.quantity}}</span><button class="btn btn-info" (click)="increase(list.id)">+</button></td>
-        <td>&#8377;{{list.quantity*list.price}}</td>
-        <td><button class="btn btn-danger" (click)="remove(list)">X</button></td>
-        
-    </tr>
-    <tr>
-        <td colspan="5"><h1>Sub Total:</h1></td>
-        <td>{{total}}</td>
-        <td colspan="1"><h1>{{total+quantity*delivary}}</h1></td>
-        <td><h1>{{quantity}}</h1></td>
-        <td><h1>{{delivary}}</h1></td>
-    </tr> 
-    
-</table> -->
 
 <app-header></app-header>
 
@@ -39,82 +9,68 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="quantity">
     <div class="row">
-        <div class="col-md-8">
-            <div class="card">
-                <div *ngIf="quantity">
-                    <h2>My Cart({{quantity}})</h2>
-                    <hr>
-                </div>
-                
-                 <div class="card-body  text-dark row"*ngFor="let list of cartitems  let i=index" >
-                    <div class="col-md-4">
-                        <div class="row">
-                        <img class="display-inline" src="{{list.image}}">
-                        <div class="mt-2 p-2">
-                            <button class="btn btn-info  btn" (click)="decrease(list.id)">-</button>
-                            <span class="p-2">{{list.quantity}}</span>
-                            <button class="btn btn-info  btn" (click)="increase(list.id)">+</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4 b-2">
-                        <h5>{{list.name}} is the with 64mp camera;4000mah battary</h5>
-                        <p></p>
-                        <h6><span class="text-danger">this product have easy return policy</span></h6>
-                       </div>
-                  <div class="col-md-4">
-                    <h5 class="card-title">{{list.name}}</h5>
-                    <h6 class="card-text">{{list.price}}</h6>
-                    <!-- <button href="#" class="btn btn-primary">Buy Now</button> -->
-                    <button (click)="remove(list)" class="btn btn-danger mr-1">Remove</button>
-                  </div>
-                </div>
-               </div>
-              </div>
-
-
-        <div class="col-md-4 sticky-top sticky" *ngIf="quantity">
-            <table class=" table table-hover table-striped border mt-3 ">
-                <tr>
-                <th>Details</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td><h5>item cost({{quantity}}items) :</h5> </td>
-                <td> {{total}}</td>
-            </tr>
-            <tr>
-                <td><h5>delivary Fee :</h5></td>
-                <td> {{delivary*quantity}}</td>
-            </tr>
-            <tr>
-                <td><h5>Total Cost: </h5></td>
-                <td> {{total+quantity*delivary}}</td>
-            </tr>
-            </table>
-            <table class="col-md-12 table table-hover table-striped border mt-3 ">
-                <tr>
-                    <th>Shop 1500 more For free Shipping</th>
-                </tr>
-                <tr>
-                    <td>this offer only valid today</td>
-                </tr>
-            </table>
-        </div>
-        </div>
         <div class="container border">
             <div class="col-md-9 fixed-bottom"  *ngIf="quantity">
                 <button class="btn btn-success btn-lg  mt-5 margin">Place Order</button>        
             </div>
-
-            
+        </div>
     </div>
     
+    
+
+
+<mat-card *ngIf="quantity" class="mat">
+    <mat-card-title>MY CART ({{quantity}})</mat-card-title>
+    <mat-card-content>
+        <div class="row" *ngFor="let list of cartitems  let i=index" >
+            <div class="col-md-4">
+                <div class="row">
+                <img class="display-inline" src="{{list.image}}"><br>
+                <div class="mt-2 p-2">
+                    <button class="btn btn-info  btn" (click)="decrease(list.id)">-</button>
+                    <span class="p-2">{{list.quantity}}</span>
+                    <button class="btn btn-info  btn" (click)="increase(list.id)">+</button>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4 b-2">
+                <h5>{{list.name}} is the with 64mp camera;4000mah battary</h5>
+                <p></p>
+                <h6><span class="text-danger">this product have easy return policy</span></h6>
+               </div>
+          <div class="col-md-4">
+            <h5 class="card-title">{{list.name}}</h5>
+            <h6 class="card-text">{{list.price}}</h6>
+            <button (click)="remove(list)" class="btn btn-danger mr-1">Remove</button>
+          </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="mat"  *ngIf="quantity">
+    <mat-card-title>Shop 1500 more For free Shipping</mat-card-title>
+    <mat-card-subtitle>this offer only valid today</mat-card-subtitle>
+</mat-card>
+
+    <mat-card  class="mat">
+      <h5>Price Details</h5>
+      <mat-card-content>
+        <div class="row">
+            <div class="col-md-10">
+              <p><strong>item cost({{quantity}}items):</strong></p>
+              <p><strong>delivary Fee :</strong></p>
+              <p><strong>Total Cost:</strong></p>
+
+            </div>
+            <div class="col-md-2">
+              <p>{{total}}</p>
+              <p> {{delivary*quantity}}</p>
+              <p> {{total+quantity*delivary}}</p>
+
+            </div>
+          </div>
+    </mat-card-content>
+    </mat-card>
 </div>
-    
-    
-
-
-

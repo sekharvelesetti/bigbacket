@@ -1,2 +1,10 @@
 <app-header></app-header>
-<p>associers works!</p>
+
+
+<div class="container" >
+    <div class="row" *ngFor="let item of post" >
+        <li>{{item.id}}</li>
+    </div>
+</div>
+
+

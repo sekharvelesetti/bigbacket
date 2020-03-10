@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -78,7 +79,12 @@ export class PageserviceService {
    {id:34,}
  ]
 cart={}
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   items= this.product
+
+  getalbums(){
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
+  }
+  
 }

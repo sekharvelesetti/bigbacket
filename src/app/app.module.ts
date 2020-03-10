@@ -22,6 +22,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { HometheaterComponent } from './pages/electronics/hometheater/hometheater.component';
 import { LaptopsComponent } from './pages/electronics/laptops/laptops.component';
 import { TelevisionComponent } from './pages/electronics/television/television.component'
+import {MatCardModule} from '@angular/material/card';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { TelevisionComponent } from './pages/electronics/television/television.c
     FormsModule,
     AngularFontAwesomeModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    HttpClientModule
    
   ],
   providers: [],
